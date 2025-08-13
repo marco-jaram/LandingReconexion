@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.left-section {
+    flex: 0 0 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+}
+
+.book-container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.book-image:hover {
+    transform: translateY(-5px);
+}
+
+.right-section {
+    flex: 1;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand {
+    color: #4caf50;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.description {
+    font-size: 16px;
+    color: #5a6c7d;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.benefits-section {
+    margin-bottom: 35px;
+}
+
+.benefits-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+.benefit-item:hover {
+    transform: translateX(5px);
+}
+
+.check-icon {
+    color: #4caf50;
+    font-size: 16px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.benefit-text {
+    font-size: 14px;
+    color: #5a6c7d;
+    line-height: 1.4;
+}
+
+.legal-text {
+    font-size: 12px;
+    color: #95a5a6;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.legal-text a {
+    color: #95a5a6;
+    text-decoration: underline;
+}
+
+.legal-text a:hover {
+    color: #7f8c8d;
+}
+
+.form-container iframe {
+    background-color: transparent;
+}
+
+.form-container {
+    transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        flex: none;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .right-section {
+        padding: 20px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    .left-section {
+        padding: 15px;
+    }
+    
+    .right-section {
+        padding: 15px;
+    }
+    
+    .main-title {
+        font-size: 24px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-section {
+        padding: 10px;
+    }
+    
+    .main-title {
+        font-size: 20px;
+    }
+    
+    .subtitle {
+        font-size: 13px;
+    }
+    
+    .description {
+        font-size: 13px;
+    }
+}

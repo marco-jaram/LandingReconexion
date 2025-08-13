@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <link rel="stylesheet" href="/css/styles-gracias.css">
+    <title>Gracias</title>
+  
+</head>
+<body>
+<div class="cuerpo">
+    <div class="container">
+        <div class="icon">🎉</div>
+
+        <div class="language-selector">
+            <button class="language-btn active" id="btnEs">Español</button>
+            <button class="language-btn" id="btnEn">English</button>
+        </div>
+
+        <!-- Español -->
+        <div id="contentEs" class="language-content active">
+            <h1>¡Gracias por suscribirte!</h1>
+
+            <div class="step">
+                <div class="step-icon">1</div>
+                <div class="step-content">
+                    <h3>Suscripción confirmada</h3>
+                    <p>Tu suscripción ha sido confirmada correctamente. ¡Bienvenido/a!</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">2</div>
+                <div class="step-content">
+                    <h3>Espera unos minutos</h3>
+                    <p>En breve recibirás el contenido que has solicitado. Por favor, espera unos minutos.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">3</div>
+                <div class="step-content">
+                    <h3>Mantente atento/a</h3>
+                    <p>A partir de ahora recibirás periódicamente nuestras actualizaciones en tu correo electrónico.</p>
+                </div>
+            </div>
+
+            <div class="notice-box">
+                <div class="notice-content">
+                    <span class="notice-icon">📧</span>
+                    <span>¡No olvides revisar tu carpeta de spam si no encuentras los correos!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- English -->
+        <div id="contentEn" class="language-content">
+            <h1>Thank you for subscribing!</h1>
+
+            <div class="step">
+                <div class="step-icon">1</div>
+                <div class="step-content">
+                    <h3>Subscription confirmed</h3>
+                    <p>Your subscription has been successfully confirmed. Welcome!</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">2</div>
+                <div class="step-content">
+                    <h3>Wait a few minutes</h3>
+                    <p>You will receive the content you requested shortly. Please wait a few minutes.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-icon">3</div>
+                <div class="step-content">
+                    <h3>Stay tuned</h3>
+                    <p>From now on you will periodically receive our updates in your email.</p>
+                </div>
+            </div>
+
+            <div class="notice-box">
+                <div class="notice-content">
+                    <span class="notice-icon">📧</span>
+                    <span>Don't forget to check your spam folder if you can't find our emails!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var btnEs = document.getElementById("btnEs");
+        var btnEn = document.getElementById("btnEn");
+        var contentEs = document.getElementById("contentEs");
+        var contentEn = document.getElementById("contentEn");
+
+        btnEs.addEventListener("click", function () {
+            contentEs.classList.add("active");
+            contentEn.classList.remove("active");
+            btnEs.classList.add("active");
+            btnEn.classList.remove("active");
+        });
+
+        btnEn.addEventListener("click", function () {
+            contentEn.classList.add("active");
+            contentEs.classList.remove("active");
+            btnEn.classList.add("active");
+            btnEs.classList.remove("active");
+        });
+    });
+</script>
+</body>
+</html>
